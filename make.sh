@@ -22,7 +22,7 @@ cookiecutter --checkout $GITHUB_BRANCH \
              global_aws_region=us-east-1 \
              global_account_id=406488074599 \
              global_root_domain=satindersidhu.com \
-             global_aws_route53_hosted_zone_id=Z030490526DFDMM193S0X \
+             global_aws_route53_hosted_zone_id=Z0862733Q7H3NS19YSNO \
              environment_name=demo \
              environment_subdomain=courses \
              eks_worker_group_instance_type=t3.large \

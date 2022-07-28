@@ -24,7 +24,7 @@ spec:
           # for the environment domain.
           route53:
             region: us-east-1
-            hostedZoneID: Z030490526DFDMM193S0X
+            hostedZoneID: Z0862733Q7H3NS19YSNO
 
 ---
 apiVersion: cert-manager.io/v1

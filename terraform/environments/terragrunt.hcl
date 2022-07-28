@@ -26,33 +26,6 @@ EOF
 }
 
 # Configure Terragrunt to automatically store tfstate files in an S3 bucket
-remote_state {
-  backend = "s3"
-  config = {
-    encrypt        = true
-    bucket         = "${get_env("TG_BUCKET_PREFIX", local.account_id)}-terraform-tfstate"
-    key            = "${path_relative_to_include()}/terraform.tfstate"
-    region         = local.aws_region
-    dynamodb_table = "${local.environment_namespace}-terraform-lock"
-    s3_bucket_tags = {
-      Terraform       = "true"
-      Platform        = local.platform_name
-      Environment     = local.environment
-      Platform-Region = local.platform_region
-    }
-    dynamodb_table_tags = {
-      owner           = "terragrunt"
-      name            = "Terraform lock table"
-      Platform        = local.platform_name
-      Terraform       = local.environment
-      Platform_Region = local.platform_region
-    }
-  }
-  generate = {
-    path      = "backend.tf"
-    if_exists = "overwrite_terragrunt"
-  }
-}
 
 
 # ---------------------------------------------------------------------------------------------------------------------
