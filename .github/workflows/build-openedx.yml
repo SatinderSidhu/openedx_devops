@@ -16,9 +16,9 @@ jobs:
     env:
       AWS_REGION: us-east-1
 
-      CUSTOM_THEME_REPOSITORY: edx.custom-theme
-      CUSTOM_THEME_REPOSITORY_ORGANIZATION: satinder
-      CUSTOM_THEME_REPOSITORY_REF: master
+      CUSTOM_THEME_REPOSITORY: edx-theme-example
+      CUSTOM_THEME_REPOSITORY_ORGANIZATION: lpm0073
+      CUSTOM_THEME_REPOSITORY_REF: main
 
     steps:
       - uses: actions/checkout@v3.0.2
@@ -39,15 +39,15 @@ jobs:
       #------------------------------------------------------------------------
       # Add a custom theme here.
       #------------------------------------------------------------------------
-      #- name: Add a custom theme
-      #  uses: openedx-actions/tutor-plugin-build-openedx-add-theme@v1.0.0
-      #  with:
-      #    repository: ${{ env.CUSTOM_THEME_REPOSITORY }}
-      #    repository-organization: ${{ env.CUSTOM_THEME_REPOSITORY_ORGANIZATION }}
-      #    repository-ref: ${{ env.CUSTOM_THEME_REPOSITORY_REF }}
+      - name: Add a custom theme
+        uses: openedx-actions/tutor-plugin-build-openedx-add-theme@v1.0.0
+        with:
+          repository: ${{ env.CUSTOM_THEME_REPOSITORY }}
+          repository-organization: ${{ env.CUSTOM_THEME_REPOSITORY_ORGANIZATION }}
+          repository-ref: ${{ env.CUSTOM_THEME_REPOSITORY_REF }}
           # UN-COMMENT THIS IF YOUR REPO IS PRIVATE.
           #----------------------------------------------
-      #    repository-token: ${{ secrets.PAT }}
+          #repository-token: ${{ secrets.PAT }}
           #----------------------------------------------
 
       #------------------------------------------------------------------------
@@ -61,26 +61,26 @@ jobs:
       # note that `repository-token` is optional and is only needed for
       # private repositories
       #------------------------------------------------------------------------
-      # - name: Add an edx plugin
-      #  uses: openedx-actions/tutor-plugin-build-openedx-add-requirement@v1.0.0
-      #  with:
-      #    repository: openedx-plugin-example
-      #    repository-organization: lpm0073
-      #    repository-ref: main
+      - name: Add an edx plugin
+        uses: openedx-actions/tutor-plugin-build-openedx-add-requirement@v1.0.0
+        with:
+          repository: openedx-plugin-example
+          repository-organization: lpm0073
+          repository-ref: main
           # UN-COMMENT THIS IF YOUR REPO IS PRIVATE.
           #----------------------------------------------
-       #   repository-token: ${{ secrets.PAT }}
+          #repository-token: ${{ secrets.PAT }}
           #----------------------------------------------
 
-     # - name: Add an Xblock
-     #   uses: openedx-actions/tutor-plugin-build-openedx-add-requirement@v1.0.0
-     #   with:
-     #     repository: edx-ora2
-     #     repository-organization: openedx
-     #     repository-ref: master
+      - name: Add an Xblock
+        uses: openedx-actions/tutor-plugin-build-openedx-add-requirement@v1.0.0
+        with:
+          repository: edx-ora2
+          repository-organization: openedx
+          repository-ref: master
           # UN-COMMENT THIS IF YOUR REPO IS PRIVATE.
           #----------------------------------------------
-      #    repository-token: ${{ secrets.PAT }}
+          #repository-token: ${{ secrets.PAT }}
           #----------------------------------------------
 
       #------------------------------------------------------------------------
