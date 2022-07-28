@@ -61,7 +61,7 @@ jobs:
       # note that `repository-token` is optional and is only needed for
       # private repositories
       #------------------------------------------------------------------------
-      - name: Add an edx plugin
+      # - name: Add an edx plugin
       #  uses: openedx-actions/tutor-plugin-build-openedx-add-requirement@v1.0.0
       #  with:
       #    repository: openedx-plugin-example
