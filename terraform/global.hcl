@@ -8,7 +8,7 @@
 #        Terragrunt modules in this repository.
 #------------------------------------------------------------------------------
 locals {
-  platform_name              = "octanklms"
+  platform_name              = "octankv4"
   platform_region            = "usa"
   shared_resource_identifier = "live"
   root_domain                = "satindersidhu.com"

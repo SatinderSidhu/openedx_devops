@@ -7,7 +7,7 @@
 # usage: create an RDS MySQL instance.
 #------------------------------------------------------------------------------
 resource "aws_db_subnet_group" "mysql_subnet_group" {
-  name       = "octank-mysql_subnet_group"
+  name       = "mysql_subnet_group"
   subnet_ids = var.subnet_ids
   tags       = var.tags
 }

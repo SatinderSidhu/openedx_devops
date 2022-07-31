@@ -9,7 +9,7 @@
 #        kubectl with the AWS EKS kubernetes cluster
 #        configuration credentials that are
 #        located here:
-#        https://us-east-1.console.aws.amazon.com/eks/home?region=us-east-1#/clusters/octanklms-usa-live
+#        https://us-east-1.console.aws.amazon.com/eks/home?region=us-east-1#/clusters/octankv4-usa-live
 #--------------------------------------------------------
 
 if [ $# == 2 ]; then

@@ -70,7 +70,7 @@ include {
 inputs = {
   # AWS RDS instance identifying information
   db_prefix                 = local.db_prefix
-  db_instance_id            = "octank_database"
+  db_instance_id            = dependency.mysql.outputs.db_instance_id
   resource_name             = local.resource_name
   environment_domain        = local.environment_domain
   environment_namespace     = local.environment_namespace

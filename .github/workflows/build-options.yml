@@ -18,9 +18,9 @@ jobs:
       ENABLE_CREDENTIALS: false
       ENABLE_MFE: true
 
-      SUBDOMAIN: courses
+      SUBDOMAIN: coursesv4
       DOMAIN_NAME: satindersidhu.com
-      SITE_NAME: octanklms
+      SITE_NAME: octankv4
       AWS_REGION: us-east-1
 
     steps:
