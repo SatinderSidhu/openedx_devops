@@ -21,8 +21,8 @@ jobs:
       # environment settings
       # --------------------------------------------
       ENVIRONMENT_ID: demo
-      NAMESPACE: openedx-demo
-      EKS_CLUSTER_NAME: octanklms-usa-live
+      NAMESPACE: openedx
+      EKS_CLUSTER_NAME: eksworkshop-eksctl
       S3_BUCKET_PREFIX: octanklms-usa-demo
 
       # feature flags for optional tutor modules
